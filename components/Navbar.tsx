@@ -28,7 +28,7 @@ export default function Navbar() {
 
   return (
     <header className="nav-shell">
-      <a className="brand ms-5" href="#home" aria-label="John Lorens home">Flynnn | jlz</a>
+      <a className="brand" href="#home" aria-label="John Lorens home">JL.</a>
       <nav aria-label="Primary navigation">
         {links.map(([label, id]) => (
           <a key={id} href={`#${id}`} className="nav-link">{label}</a>
