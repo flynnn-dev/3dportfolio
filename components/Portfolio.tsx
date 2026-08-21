@@ -12,6 +12,7 @@ import ProjectCard from "./ProjectCard";
 import ContactForm from "./ContactForm";
 import { journey, projects, socialLinks, techGroups } from "@/data/portfolio";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
+import Image from "next/image";
 
 const SceneCanvas = dynamic(() => import("./scene/SceneCanvas"), { ssr: false });
 
@@ -71,17 +72,56 @@ export default function Portfolio() {
           </div>
         </section>
 
-        <section id="about" className="section align-right">
-          <div className="content narrow glass-panel reveal">
-            <p className="eyebrow">01 / PROFILE</p>
-            <h2>ABOUT ME</h2>
-            <p className="lead">I’m John Lorens, a BSIT student and web developer focused on modern web applications, interactive interfaces, and dependable full-stack systems.</p>
-            <p className="muted">I enjoy combining clean engineering with thoughtful motion—using the right amount of visual depth without compromising usability or performance.</p>
-            <div className="stat-grid">
-              <div><strong>FULL-STACK</strong><span>Development</span></div>
-              <div><strong>MODERN UI</strong><span>Development</span></div>
-              <div><strong>INTERACTIVE</strong><span>Web Experiences</span></div>
+        <section id="about" className="section about-section">
+          <div className="content glass-panel reveal about-card">
+
+            <div className="about-photo-wrap">
+              <div className="profile-photo">
+                <Image
+                  src="/john-lorens.jpg"
+                  alt="John Lorens"
+                  width={400}
+                  height={400}
+                  className="profile-image"
+                />
+              </div>
             </div>
+
+            <div className="about-content">
+              <p className="eyebrow">01 / PROFILE</p>
+
+              <h2 className="about-title">ABOUT ME</h2>
+
+              <p className="lead">
+                I’m John Lorens, a BSIT student and web developer focused on modern
+                web applications, interactive interfaces, and dependable full-stack
+                systems.
+              </p>
+
+              <p className="muted">
+                I enjoy combining clean engineering with thoughtful motion—using the
+                right amount of visual depth without compromising usability or
+                performance.
+              </p>
+
+              <div className="stat-grid">
+                <div>
+                  <strong>FULL-STACK</strong>
+                  <span>Development</span>
+                </div>
+
+                <div>
+                  <strong>MODERN UI</strong>
+                  <span>Development</span>
+                </div>
+
+                <div>
+                  <strong>INTERACTIVE</strong>
+                  <span>Web Experiences</span>
+                </div>
+              </div>
+            </div>
+
           </div>
         </section>
 
