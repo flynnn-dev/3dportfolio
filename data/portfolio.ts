@@ -58,7 +58,7 @@ export const journey: JourneyItem[] = [
 ];
 
 export const socialLinks = {
-  email: "your-email@example.com",
+  email: "johnlorens017@example.com",
   github: "https://github.com/yourusername",
   linkedin: "https://www.linkedin.com/in/yourusername",
 };
